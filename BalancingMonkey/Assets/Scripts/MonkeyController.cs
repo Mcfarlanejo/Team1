@@ -6,7 +6,6 @@ using UnityEngine;
 public class MonkeyController : MonoBehaviour
 {
     [SerializeField] private MonkeyMovement[] monkeyLimbs;
-    private bool monkeyTouchingFloor = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,20 +16,34 @@ public class MonkeyController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("space"))
-        {
-            foreach (MonkeyMovement monkeyPart in monkeyLimbs)
-            {
-                if (monkeyPart.touchingFloor)
-                {
-                    monkeyTouchingFloor = true;
-                }
-            }
-        }
-        if (monkeyTouchingFloor)
+        if ((Input.GetKeyDown("space")) && (BeingDragged()) && (Touching()))
         {
             FreezeAllMonkeyParts();
         }
+    }
+
+    private bool Touching()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            if (monkeyPart.connected)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool BeingDragged()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            if (monkeyPart.dragging)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void FreezeAllMonkeyParts()

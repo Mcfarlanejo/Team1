@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 54724016}
   m_Layer: 0
   m_Name: ArmL
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &54724015
 Rigidbody2D:
   serializedVersion: 4
@@ -188,7 +189,7 @@ GameObject:
   - component: {fileID: 680065739}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,7 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &680065738
 Rigidbody2D:
   serializedVersion: 4
@@ -360,7 +362,7 @@ GameObject:
   - component: {fileID: 877310870}
   m_Layer: 0
   m_Name: LegL
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,7 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &877310869
 Rigidbody2D:
   serializedVersion: 4
@@ -532,7 +535,7 @@ GameObject:
   - component: {fileID: 881723042}
   m_Layer: 0
   m_Name: Torso
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,7 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &881723041
 Rigidbody2D:
   serializedVersion: 4
@@ -704,7 +708,7 @@ GameObject:
   - component: {fileID: 1062988583}
   m_Layer: 0
   m_Name: LegR
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &1062988582
 Rigidbody2D:
   serializedVersion: 4
@@ -876,7 +881,7 @@ GameObject:
   - component: {fileID: 1651775650}
   m_Layer: 0
   m_Name: ArmR
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,7 +965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchingFloor: 0
+  power: 150
+  connected: 0
 --- !u!50 &1651775649
 Rigidbody2D:
   serializedVersion: 4

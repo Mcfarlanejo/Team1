@@ -13,7 +13,8 @@ public class MonkeyMovement : MonoBehaviour
 
     public float power = 150;
 
-    public bool touchingFloor = false;
+    public bool connected = false;
+    public bool dragging = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,9 @@ public class MonkeyMovement : MonoBehaviour
 
     public void FreezeMonkey()
     {
-        rb.simulated = false;
+        //rb.simulated = false;
+
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     private void OnMouseDown()
@@ -37,24 +40,32 @@ public class MonkeyMovement : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        dragging = true;
         if (rb.simulated)
         {
             rb.AddForce(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"))*power);
         }
     }
 
+    private void OnMouseUp()
+    {
+        dragging = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "Floor")
+        if ((collision.collider.name == "Floor") || ((collision.collider.tag == "MonkeyPart") &&
+            (collision.collider.GetComponentInParent<MonkeyController>().name != gameObject.GetComponentInParent<MonkeyController>().name)))
         {
-            touchingFloor = true;
+            connected = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.name == "Floor")
+        if ((collision.collider.name == "Floor") || ((collision.collider.tag == "MonkeyPart") && 
+            (collision.collider.GetComponentInParent<MonkeyController>().name != gameObject.GetComponentInParent<MonkeyController>().name)))
         {
-            touchingFloor = false;
+            connected = false;
         }
     }
 }
