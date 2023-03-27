@@ -42,7 +42,7 @@ public class MonekyMovement : MonoBehaviour
     {
         if (rb.simulated)
         {
-            rb.AddForce(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
+            rb.AddForce(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"))*100);
         }
     }
 }
