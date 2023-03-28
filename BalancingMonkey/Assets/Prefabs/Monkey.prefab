@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &54724015
 Rigidbody2D:
   serializedVersion: 4
@@ -273,8 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &680065738
 Rigidbody2D:
   serializedVersion: 4
@@ -446,8 +450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &877310869
 Rigidbody2D:
   serializedVersion: 4
@@ -619,8 +625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &881723041
 Rigidbody2D:
   serializedVersion: 4
@@ -792,8 +800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &1062988582
 Rigidbody2D:
   serializedVersion: 4
@@ -965,8 +975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1a636781fbb547859fd7473023d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 150
   connected: 0
+  dragging: 0
+  frozen: 0
+  touchingBanana: 0
 --- !u!50 &1651775649
 Rigidbody2D:
   serializedVersion: 4

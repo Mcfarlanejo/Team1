@@ -15,11 +15,28 @@ public class MonkeyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if ((Input.GetKeyDown("space")) && (BeingDragged()) && (Touching()))
         {
             FreezeAllMonkeyParts();
+
         }
+
+        if (TouchingBanana())
+        {
+            Debug.Log("You Win!");
+        }
+    }
+
+    private bool TouchingBanana()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            if (monkeyPart.touchingBanana)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private bool Touching()

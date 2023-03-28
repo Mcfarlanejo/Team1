@@ -8,13 +8,14 @@ public class MonkeyMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    private Vector3 screenPoint;
-    private Vector3 offset;
-
-    public float power = 150;
-
     public bool connected = false;
     public bool dragging = false;
+    public bool frozen = false;
+
+    private Vector3 mousePosition;
+    private float zOffSet = 0.1f;
+
+    public bool touchingBanana = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,24 +27,22 @@ public class MonkeyMovement : MonoBehaviour
 
     public void FreezeMonkey()
     {
-        //rb.simulated = false;
-
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        frozen = true;
     }
 
     private void OnMouseDown()
     {
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-
-        offset = gameObject.transform.position- Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+        mousePosition = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
     }
 
     private void OnMouseDrag()
     {
         dragging = true;
-        if (rb.simulated)
+        if (!frozen)
         {
-            rb.AddForce(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"))*power);
+            Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
+            rb.MovePosition (newPosition + mousePosition);
         }
     }
 
@@ -55,9 +54,18 @@ public class MonkeyMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.collider.name == "Floor") || ((collision.collider.tag == "MonkeyPart") &&
-            (collision.collider.GetComponentInParent<MonkeyController>().name != gameObject.GetComponentInParent<MonkeyController>().name)))
+            (collision.collider.GetComponentInParent<MonkeyController>().name != gameObject.GetComponentInParent<MonkeyController>().name)
+             && (collision.collider.GetComponent<MonkeyMovement>().frozen == true)))
         {
             connected = true;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {  
+        if ((collision.tag == "Banana") && (frozen))
+        {
+            touchingBanana = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
