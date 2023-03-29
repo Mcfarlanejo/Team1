@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class buttonAction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text currPlayer;
+    private string[] players = { "Player 1", "Player 2" };
+    private int currI = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start(){
+        currPlayer.text = "Current Player: " + players[currI];
+    }
+    public void onButtonPress(){
+        currI = (currI + 1) % players.Length;
+        currPlayer.text = "Current Player: " + players[currI];
     }
 }
