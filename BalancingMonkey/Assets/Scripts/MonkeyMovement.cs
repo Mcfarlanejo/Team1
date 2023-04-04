@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 public class MonkeyMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private GameObject attachedLimb;
 
     public bool connected = false;
     public bool dragging = false;
@@ -27,7 +28,11 @@ public class MonkeyMovement : MonoBehaviour
 
     public void FreezeMonkey()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        if (connected) 
+        {
+            HingeJoint2D newJoint = gameObject.AddComponent<HingeJoint2D>();
+            newJoint.connectedBody = attachedLimb.GetComponent<Rigidbody2D>();  
+        }
         frozen = true;
     }
 
@@ -58,6 +63,7 @@ public class MonkeyMovement : MonoBehaviour
              && (collision.collider.GetComponent<MonkeyMovement>().frozen == true)))
         {
             connected = true;
+            attachedLimb = collision.collider.gameObject;
         }
     }
 

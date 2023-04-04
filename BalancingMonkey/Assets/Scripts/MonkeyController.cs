@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MonkeyController : MonoBehaviour
@@ -18,10 +19,9 @@ public class MonkeyController : MonoBehaviour
         if ((Input.GetKeyDown("space")) && (BeingDragged()) && (Touching()))
         {
             FreezeAllMonkeyParts();
-
         }
 
-        if (TouchingBanana())
+        if ((TouchingBanana()) && (SolidPosition()))
         {
             Debug.Log("You Win!");
         }
@@ -69,5 +69,18 @@ public class MonkeyController : MonoBehaviour
         {
             monkeyPart.FreezeMonkey();
         }
+    }
+
+    private bool SolidPosition()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            Rigidbody2D rb = monkeyPart.GetComponent<Rigidbody2D>();
+            if ((rb.velocity.x > .05f) || (rb.velocity.y > .05f))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
