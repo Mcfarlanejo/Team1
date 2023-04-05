@@ -8,12 +8,23 @@ public class buttonAction : MonoBehaviour
     public Text currPlayer;
     private string[] players = { "Player 1", "Player 2" };
     private int currI = 0;
+    private string p1, p2;
 
     void Start(){
-        currPlayer.text = "Current Player: " + players[currI];
+        p1 = "Current Player: " + $"<color=#ff0000>Player 1</color>";
+        p2 = "Current Player: " + $"<color=#0000ff>Player 2</color>";
+        currPlayer.text = p1;
     }
     public void onButtonPress(){
         currI = (currI + 1) % players.Length;
-        currPlayer.text = "Current Player: " + players[currI];
+        switch(currI){
+            case 0:
+                currPlayer.text = p1;
+                break;
+            case 1:
+                currPlayer.text = p2;
+                break;
+        }
+        
     }
 }
