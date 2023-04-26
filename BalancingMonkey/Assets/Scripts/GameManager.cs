@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("tab"))
         {
             GameObject newMonkey = Instantiate(monkeyPrefab, spawnPosition, Quaternion.identity);
+            int Overlay = LayerMask.NameToLayer("Overlay");
+            newMonkey.layer = Overlay;
             newMonkey.name = "Monkey " + monkeyCounter;
             monkeyCounter++;
         }
