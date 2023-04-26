@@ -23,7 +23,6 @@ public class Queue : MonoBehaviour
         spriteRenderer.sprite = spriteArray[Random.Range(0, 2)];
 
         currentMonkey.transform.position = new Vector3(-8.09f,-3.5f);
-
     }
 
     // Update is called once per frame
