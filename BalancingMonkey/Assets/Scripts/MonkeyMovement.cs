@@ -17,6 +17,7 @@ public class MonkeyMovement : MonoBehaviour
     private float zOffSet = 0.1f;
 
     public bool touchingBanana = false;
+    public Camera cam;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class MonkeyMovement : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("Mouse Down");
         mousePosition = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
     }
 

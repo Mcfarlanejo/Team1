@@ -9,7 +9,7 @@ public class ClickHandler : MonoBehaviour
     {
         // This code will run when the GameObject is clicked on
         Debug.Log("Prefab clicked!");
-        queue.NewQueue();
+        //queue.NewQueue();
 
     }
 }
