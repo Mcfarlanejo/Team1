@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 558864703}
   - component: {fileID: 558864702}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Player1Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 1397064708}
   - component: {fileID: 1397064707}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Player2Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,6 +1392,8 @@ GameObject:
   - component: {fileID: 1867969787}
   - component: {fileID: 1867969786}
   - component: {fileID: 1867969785}
+  - component: {fileID: 1867969790}
+  - component: {fileID: 1867969789}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1527,6 +1529,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867969783}
   m_CullTransparentMesh: 1
+--- !u!114 &1867969789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867969783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fecca16f083044f923eb7b497adeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monkeyObjects: []
+  queue: []
+  spriteRenderer: {fileID: 0}
+  currentMonkey: {fileID: 0}
+  nextMonkey: {fileID: 0}
+  nextInQueue: {fileID: 0}
+  player1Position: {x: -7.5, y: -1.5}
+  player2Position: {x: 7.5, y: -1}
+--- !u!114 &1867969790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867969783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4749f846028f35541a907821ebd0b90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  queue: {fileID: 0}
 --- !u!1 &1933373156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,13 +1606,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fecca16f083044f923eb7b497adeae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myList:
+  monkeyObjects:
   - {fileID: 6121540470186209063, guid: 8b42a613407b0164cbe50f86795c0a9b, type: 3}
   - {fileID: 6121540470186209063, guid: 162753dd5051cdb44b85874fe55e88ea, type: 3}
   queue:
-  - {fileID: 5743116497680742911, guid: b0e80856a3519ad4382164c4694e465c, type: 3}
-  - {fileID: 1291054067075382202, guid: eb5a78231ba32ca4bad25ef612bd7d76, type: 3}
+  - {fileID: 2800000, guid: 938dfacf3e632914bb4facc580bf1f28, type: 3}
+  - {fileID: 2800000, guid: 5577226e748bc5f4198066fcd875e6f6, type: 3}
   spriteRenderer: {fileID: 0}
   currentMonkey: {fileID: 0}
   nextMonkey: {fileID: 0}
   nextInQueue: {fileID: 0}
+  player1Position: {x: -7.5, y: 1}
+  player2Position: {x: 7.5, y: -1}
