@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2608932574991589635}
   - component: {fileID: 6788931763929586901}
   - component: {fileID: -3817460150272061260}
-  - component: {fileID: 6746339106029574480}
+  - component: {fileID: -2138758811283207734}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480f538c77c37414a8bfb599a76cb541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6746339106029574480
+--- !u!114 &-2138758811283207734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2608932574991589644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: df2868252ab5c4d1da357e8f11f1b524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -84,9 +84,9 @@ MonoBehaviour:
   SyncRotAngleX: 1
   SyncRotAngleY: 1
   SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
   PositionThreshold: 0.001
   RotAngleThreshold: 0.01
   ScaleThreshold: 0.01
@@ -141,4 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monkeyPrefab: {fileID: 6121540470186209063, guid: 8b42a613407b0164cbe50f86795c0a9b, type: 3}
+  hostMonkey: {fileID: 6121540470186209063, guid: 8b42a613407b0164cbe50f86795c0a9b, type: 3}
+  player2: {fileID: 6121540470186209063, guid: 99f9db8a89a9acd428869927eb05d618, type: 3}
   spawnPosition: {x: 4, y: 0, z: 0}
+  Position:
+    m_InternalValue: {x: 0, y: 0, z: 0}
