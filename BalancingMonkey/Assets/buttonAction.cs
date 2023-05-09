@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class buttonAction : MonoBehaviour
 {
     public Text currPlayer;
@@ -25,6 +26,10 @@ public class buttonAction : MonoBehaviour
                 currPlayer.text = p2;
                 break;
         }
+        
+        GameObject myGameObject = GameObject.Find("MonkeyManager");
+        Queue scriptA = myGameObject.GetComponent<Queue>();
+        scriptA.NewTurn();
         
     }
 }

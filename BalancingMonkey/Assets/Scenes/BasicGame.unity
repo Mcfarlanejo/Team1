@@ -1314,7 +1314,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10.234853
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -1338,7 +1338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702667156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 5.67, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1392,7 +1392,6 @@ GameObject:
   - component: {fileID: 1867969787}
   - component: {fileID: 1867969786}
   - component: {fileID: 1867969785}
-  - component: {fileID: 1867969790}
   - component: {fileID: 1867969789}
   m_Layer: 5
   m_Name: Button
@@ -1538,30 +1537,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867969783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0fecca16f083044f923eb7b497adeae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monkeyObjects: []
-  queue: []
-  spriteRenderer: {fileID: 0}
-  currentMonkey: {fileID: 0}
-  nextMonkey: {fileID: 0}
-  nextInQueue: {fileID: 0}
-  player1Position: {x: -7.5, y: -1.5}
-  player2Position: {x: 7.5, y: -1}
---- !u!114 &1867969790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867969783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4749f846028f35541a907821ebd0b90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  queue: {fileID: 0}
 --- !u!1 &1933373156
 GameObject:
   m_ObjectHideFlags: 0
