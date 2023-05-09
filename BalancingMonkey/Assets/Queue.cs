@@ -74,26 +74,6 @@ public class Queue : MonoBehaviour
         ChangeImage(image, 2);
        }
     }
-    
-    
-    
-    
-    // else if {
-    //     if(currI % 2 == 1)
-    //     {
-    //     newMonkey = Instantiate(monkeyObjects[monkeyOne]);
-    //     GameObject player1Image = GameObject.Find("Player1Image");
-    //     Image image = player1Image.GetComponent<Image>();
-    //     ChangeImage(image, 1);
-    //     } else {
-    //     newMonkey = Instantiate(monkeyObjects[monkeyTwo]);
-    //     newMonkey.transform.position = player2Position;
-    //     GameObject player2Image = GameObject.Find("Player2Image");
-    //     Image image = player2Image.GetComponent<Image>();
-    //     ChangeImage(image, 2);
-    //    }
-
-    // }
 
     }
 
