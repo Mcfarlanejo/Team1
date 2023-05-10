@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 6121540470186209056}
   - component: {fileID: 1494005028}
   - component: {fileID: 7810358636965607832}
-  - component: {fileID: 6613865797919571882}
+  - component: {fileID: 1735873997399920396}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Untagged
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   SceneMigrationSynchronization: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &6613865797919571882
+--- !u!114 &1735873997399920396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

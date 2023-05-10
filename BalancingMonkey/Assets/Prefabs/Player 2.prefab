@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 6121540470186209056}
   - component: {fileID: 1494005028}
   - component: {fileID: 673345792942463318}
-  - component: {fileID: 2300995827999970711}
+  - component: {fileID: 7437631216610597189}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   SceneMigrationSynchronization: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &2300995827999970711
+--- !u!114 &7437631216610597189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

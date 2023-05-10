@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 
 public class GameManager : NetworkBehaviour
 {
@@ -16,27 +17,23 @@ public class GameManager : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (IsHost)
-        {
-            monkeyPrefab = hostMonkey;
-        }
-        else
+
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        if (!IsHost)
         {
             monkeyPrefab = player2;
             spawnPosition = -spawnPosition;
         }
     }
 
-    public override void OnNetworkSpawn()
-    {
-        SpawnMonkey();
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner)
-            return;
+        if (!IsOwner) return;
+
         if (Input.GetKeyDown("tab"))
         {
             SpawnMonkey();
@@ -46,30 +43,15 @@ public class GameManager : NetworkBehaviour
     public void SpawnMonkey()
     {
         GameObject newMonkey = null;
-        if (NetworkManager.Singleton.IsServer)
-        {
-            Debug.Log("Host");
-            newMonkey = Instantiate(monkeyPrefab, spawnPosition, Quaternion.identity);
-            newMonkey.name = "Monkey " + monkeyCounter;
+
+        newMonkey = Instantiate(monkeyPrefab, spawnPosition, Quaternion.identity);
+        newMonkey.name = "Monkey " + monkeyCounter;
             
-            monkeyCounter++;
-        }
-        else
-        {
-            SubmitRequestServerRPC();
-        }
+        monkeyCounter++;
+  
         if (newMonkey != null)
         {
             newMonkey.GetComponent<NetworkObject>().Spawn(true);
         }
-    }
-    [ServerRpc]
-    private void SubmitRequestServerRPC()
-    {
-        Debug.Log("Client");
-        GameObject newMonkey = Instantiate(player2, spawnPosition, Quaternion.identity);
-        newMonkey.name = "Monkey " + monkeyCounter;
-        newMonkey.GetComponent<NetworkObject>().Spawn(true);
-        monkeyCounter++;
     }
 }
