@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 54724015}
   - component: {fileID: 54724014}
   - component: {fileID: 54724016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmL
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 680065738}
   - component: {fileID: 680065737}
   - component: {fileID: 680065739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 877310869}
   - component: {fileID: 877310868}
   - component: {fileID: 877310870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LegL
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 881723041}
   - component: {fileID: 881723040}
   - component: {fileID: 881723042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torso
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 1062988582}
   - component: {fileID: 1062988581}
   - component: {fileID: 1062988583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LegR
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 1651775649}
   - component: {fileID: 1651775648}
   - component: {fileID: 1651775650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArmR
   m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6121540470186209056}
   - component: {fileID: 1494005028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Monkey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
