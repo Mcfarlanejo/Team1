@@ -104,6 +104,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &54724015
 Rigidbody2D:
   serializedVersion: 4
@@ -118,7 +119,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -279,6 +280,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &680065738
 Rigidbody2D:
   serializedVersion: 4
@@ -293,7 +295,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -454,6 +456,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &877310869
 Rigidbody2D:
   serializedVersion: 4
@@ -468,7 +471,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -629,6 +632,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &881723041
 Rigidbody2D:
   serializedVersion: 4
@@ -643,7 +647,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -804,6 +808,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &1062988582
 Rigidbody2D:
   serializedVersion: 4
@@ -818,7 +823,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -979,6 +984,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
+  cam: {fileID: 0}
 --- !u!50 &1651775649
 Rigidbody2D:
   serializedVersion: 4
@@ -993,7 +999,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1060,9 +1066,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6121540470186209056}
   - component: {fileID: 1494005028}
+  - component: {fileID: -3493678404344362400}
   m_Layer: 0
   m_Name: Monkey 1
-  m_TagString: Untagged
+  m_TagString: Monkey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,3 +1108,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monkeyLimbs: []
+--- !u!114 &-3493678404344362400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121540470186209063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ca9994043a65f4aa31cdd1517bb3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Banana
   - MonkeyPart
+  - Monkey
   layers:
   - Default
   - TransparentFX

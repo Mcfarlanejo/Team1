@@ -12,8 +12,8 @@ public class Queue : MonoBehaviour
     public GameObject nextMonkey;
     public GameObject nextInQueue;
 
-    public Vector2 player1Position = new Vector2(-7.5f,-1.5f);
-    public Vector2 player2Position = new Vector2(7.5f,-1f);
+    public Vector2 player1Position = new Vector2();
+    public Vector2 player2Position = new Vector2();
 
     private int currI = 0;
     public int monkeyOne = 0;
@@ -51,6 +51,7 @@ public class Queue : MonoBehaviour
         {
         GameObject player1Image = GameObject.Find("Player1Image");
         Image image = player1Image.GetComponent<Image>();
+        newMonkey.transform.position = player1Position;
         ChangeImage(image, 1);
         } else {
         newMonkey.transform.position = player2Position;
@@ -65,6 +66,7 @@ public class Queue : MonoBehaviour
         GameObject newMonkey = Instantiate(monkeyObjects[monkeyOne]);
         GameObject player1Image = GameObject.Find("Player1Image");
         Image image = player1Image.GetComponent<Image>();
+        newMonkey.transform.position = player1Position;
         ChangeImage(image, 1);
         } else {
         GameObject newMonkey = Instantiate(monkeyObjects[monkeyTwo]);
