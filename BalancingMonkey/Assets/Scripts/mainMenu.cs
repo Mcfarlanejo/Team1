@@ -7,7 +7,7 @@ public class mainMenu : MonoBehaviour
 {
     public void StartGame() {
         // Load the game scene
-        SceneManager.LoadScene("UI-Scene");
+        SceneManager.LoadScene("Marco Scene");
     }
 
     public void MainMenu()

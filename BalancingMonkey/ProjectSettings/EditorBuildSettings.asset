@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Queue.unity
+    path: Assets/Scenes/UI-Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu-Scene.unity
+    guid: c161b541233f5d84facc4c7aa7c0fe1b
+  - enabled: 1
+    path: Assets/Scenes/Marco Scene.unity
+    guid: b44591599af21124891fddc22c42402c
   m_configObjects: {}
