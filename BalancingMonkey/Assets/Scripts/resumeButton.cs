@@ -6,6 +6,5 @@ public class resumeButton : MonoBehaviour
 {
 
     void Start(){
-        Time.timeScale = 1;
     }
 }

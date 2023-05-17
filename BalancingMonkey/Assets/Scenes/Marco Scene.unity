@@ -3322,7 +3322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d250441bce016479965918c351cd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currPlayer: {fileID: 1388392928}
   currentPlayerImage: {fileID: 48819398}
   images:
   - {fileID: 21300000, guid: fae3ba7be3bbf054eb02f08beef79dfa, type: 3}
@@ -3563,8 +3562,8 @@ MonoBehaviour:
   currentMonkey: {fileID: 0}
   nextMonkey: {fileID: 0}
   nextInQueue: {fileID: 0}
-  player1Position: {x: -18, y: 1}
-  player2Position: {x: 18, y: -1}
+  player1Position: {x: -14, y: 1}
+  player2Position: {x: 14, y: -1}
   monkeyOne: 0
   monkeyTwo: 0
   iterations: 0

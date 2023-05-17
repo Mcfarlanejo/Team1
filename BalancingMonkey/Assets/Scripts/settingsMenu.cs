@@ -13,8 +13,6 @@ public class settingsMenu : MonoBehaviour
     public float sfx;
 
     public void Start() {
-        Time.timeScale = 0;
-        Debug.Log("Clicked On Settings menu");
         if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("sfxVolume")) {
             LoadSoundSettings();
 
