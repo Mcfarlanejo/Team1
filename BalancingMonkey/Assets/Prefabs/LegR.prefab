@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6803291107253666615}
   - component: {fileID: 985256633235258625}
   - component: {fileID: 784689100016147007}
+  - component: {fileID: 850472912358192645}
+  - component: {fileID: 7877844911876485733}
   m_Layer: 0
   m_Name: Knee
   m_TagString: Untagged
@@ -119,6 +121,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0.07058546, y: -0.15125334}
   m_Size: {x: 1.5740858, y: 1.574086}
   m_Direction: 0
+--- !u!50 &850472912358192645
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355260387366071411}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!233 &7877844911876485733
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355260387366071411}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 2771254018282602193}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: -1.5839996}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &5079587343710192639
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +178,8 @@ GameObject:
   - component: {fileID: 7656730502105282261}
   - component: {fileID: 3612047184187944480}
   - component: {fileID: 5080001697721566232}
+  - component: {fileID: 2771254018282602193}
+  - component: {fileID: 8556956649946048309}
   m_Layer: 0
   m_Name: Hip
   m_TagString: Untagged
@@ -238,6 +287,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0.15125418, y: -0.42350626}
   m_Size: {x: 2.501774, y: 2.0581045}
   m_Direction: 1
+--- !u!50 &2771254018282602193
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079587343710192639}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!233 &8556956649946048309
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079587343710192639}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 2824090317608397345}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.29541898, y: 0.8862562}
+  m_ConnectedAnchor: {x: 0.29541898, y: 0.8862562}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &7033114265028147530
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +404,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.18338838, y: 0}
-  m_ConnectedAnchor: {x: -1.64, y: -4.4900002}
+  m_ConnectedAnchor: {x: -1.8233883, y: -9.34}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -331,6 +425,8 @@ GameObject:
   - component: {fileID: 7220408427171547698}
   - component: {fileID: 4170510613792841740}
   - component: {fileID: 2745575741709259522}
+  - component: {fileID: 1210818877442473688}
+  - component: {fileID: 7293927412457258382}
   m_Layer: 0
   m_Name: Foot
   m_TagString: Untagged
@@ -438,3 +534,48 @@ CapsuleCollider2D:
   m_Offset: {x: 0.11567355, y: -0.050974507}
   m_Size: {x: 2.523891, y: 1.9382478}
   m_Direction: 1
+--- !u!50 &1210818877442473688
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423032926316299383}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!233 &7293927412457258382
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423032926316299383}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 850472912358192645}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.3798244, y: 0.2532158}
+  m_ConnectedAnchor: {x: -0.28017557, y: -1.012785}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359

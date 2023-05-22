@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class MonkeyController : MonoBehaviour
 {
-    [SerializeField] private MonkeyMovement[] monkeyLimbs;
+    public MonkeyMovement[] monkeyLimbs;
+    public GameObject youWinPannel;
     // Start is called before the first frame update
     void Start()
     {
         monkeyLimbs = GetComponentsInChildren<MonkeyMovement>();
+        youWinPannel = GameObject.Find("Winner");
     }
 
     // Update is called once per frame
@@ -21,8 +23,9 @@ public class MonkeyController : MonoBehaviour
             FreezeAllMonkeyParts();
         }
 
-        if ((TouchingBanana()) && (SolidPosition()))
+        if ((TouchingBanana()) && (!youWinPannel.transform.GetChild(0).gameObject.activeInHierarchy))
         {
+            youWinPannel.transform.GetChild(0).gameObject.SetActive(true);
             Debug.Log("You Win!");
         }
     }

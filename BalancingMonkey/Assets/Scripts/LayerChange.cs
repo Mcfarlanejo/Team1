@@ -17,16 +17,16 @@ public class LayerChange : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && hit.collider && hit.collider.CompareTag("MonkeyPart"))
         {
+            GameObject monkey = hit.collider.transform.parent.gameObject;
+            monkey.layer = 6;
+            foreach (MonkeyMovement child in monkey.GetComponent<MonkeyController>().monkeyLimbs)
+            {
+                 child.gameObject.layer = 6;
+            }
+            
             hit.collider.gameObject.GetComponent<MonkeyMovement>().dragging = true;
             // The Ray hit something!
             Debug.Log("hit something");
-
-            GameObject monkey = hit.collider.transform.parent.gameObject;
-            monkey.layer = 6;
-            foreach (Transform child in monkey.transform)
-         {
-                 child.gameObject.layer = 6;
-         }
         }
     }
 }

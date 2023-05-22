@@ -17,12 +17,14 @@ public class MonkeyMovement : MonoBehaviour
     private float zOffSet = 0.1f;
 
     public bool touchingBanana = false;
-    public Camera cam;
+    public Camera overlay;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        overlay = GameObject.Find("Overlay").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class MonkeyMovement : MonoBehaviour
     private void OnMouseDown()
     {
 
-        mousePosition = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
+        mousePosition = transform.position - overlay.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
     }
 
     private void OnMouseDrag()
@@ -48,7 +50,7 @@ public class MonkeyMovement : MonoBehaviour
         dragging = true;
         if (!frozen)
         {
-            Vector3 newPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
+            Vector3 newPosition = overlay.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zOffSet));
             rb.MovePosition (newPosition + mousePosition);
         }
     }

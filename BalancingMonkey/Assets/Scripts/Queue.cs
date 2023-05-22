@@ -19,18 +19,14 @@ public class Queue : MonoBehaviour
     public int monkeyOne = 0;
     public int monkeyTwo = 0;
     public int iterations = 0;
+    private int monkeyCounter = 0;
 
     
 
     // Start is called before the first frame update
     void Start()
     {
-
         NewTurn();
-
-
-
-
     }
 
     // Update is called once per frame
@@ -45,38 +41,51 @@ public class Queue : MonoBehaviour
         currI = (currI + 1);
 
         //first two monkeys are complete random.
-        if(iterations < 2){
-        GameObject newMonkey = Instantiate(monkeyObjects[Random.Range(0,2)]);
-        if(currI % 2 == 1)
+        if(iterations < 2)
         {
-        GameObject player1Image = GameObject.Find("Player1Image");
-        Image image = player1Image.GetComponent<Image>();
-        newMonkey.transform.position = player1Position;
-        ChangeImage(image, 1);
-        } else {
-        newMonkey.transform.position = player2Position;
-        GameObject player2Image = GameObject.Find("Player2Image");
-        Image image = player2Image.GetComponent<Image>();
-        ChangeImage(image, 2);
-       }
-       iterations++;
-    }else {
-        if(currI % 2 == 1)
-        {
-        GameObject newMonkey = Instantiate(monkeyObjects[monkeyOne]);
-        GameObject player1Image = GameObject.Find("Player1Image");
-        Image image = player1Image.GetComponent<Image>();
-        newMonkey.transform.position = player1Position;
-        ChangeImage(image, 1);
-        } else {
-        GameObject newMonkey = Instantiate(monkeyObjects[monkeyTwo]);
-        newMonkey.transform.position = player2Position;
-        GameObject player2Image = GameObject.Find("Player2Image");
-        Image image = player2Image.GetComponent<Image>();
-        ChangeImage(image, 2);
-       }
-    }
+            GameObject newMonkey = Instantiate(monkeyObjects[Random.Range(0,2)]);
+            monkeyCounter++;
+            newMonkey.name = "Monkey " + monkeyCounter;
 
+            if (currI % 2 == 1)
+            {
+                GameObject player1Image = GameObject.Find("Player1Image");
+                Image image = player1Image.GetComponent<Image>();
+                newMonkey.transform.position = player1Position;
+                ChangeImage(image, 1);
+            } 
+            else 
+            {
+                newMonkey.transform.position = player2Position;
+                GameObject player2Image = GameObject.Find("Player2Image");
+                Image image = player2Image.GetComponent<Image>();
+                ChangeImage(image, 2);
+            }
+            iterations++;
+        }
+        else 
+        {
+            if(currI % 2 == 1)
+            {
+                GameObject newMonkey = Instantiate(monkeyObjects[monkeyOne]);
+                monkeyCounter++;
+                newMonkey.name = "Monkey " + monkeyCounter;
+                GameObject player1Image = GameObject.Find("Player1Image");
+                Image image = player1Image.GetComponent<Image>();
+                newMonkey.transform.position = player1Position;
+                ChangeImage(image, 1);
+            } 
+            else 
+            {
+                GameObject newMonkey = Instantiate(monkeyObjects[monkeyTwo]);
+                monkeyCounter++;
+                newMonkey.name = "Monkey " + monkeyCounter;
+                newMonkey.transform.position = player2Position;
+                GameObject player2Image = GameObject.Find("Player2Image");
+                Image image = player2Image.GetComponent<Image>();
+                ChangeImage(image, 2);
+            }
+        }
     }
 
     public void ChangeImage(Image image, int currentMonkey)
@@ -98,7 +107,5 @@ public class Queue : MonoBehaviour
             monkeyTwo = nextMonkeyImage;
             Debug.Log("Monkey 2 is - " + nextMonkeyImage);
         }
-
-
     }
 }
