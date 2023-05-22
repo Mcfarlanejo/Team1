@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5834570339015604103}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 8781498389839678817}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: MonkeyPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 825263138146473726}
   m_Layer: 0
   m_Name: NewMonkey
-  m_TagString: Untagged
+  m_TagString: Monkey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,6 +446,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3355260387366071411, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     - target: {fileID: 3588755408738239928, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.64
@@ -474,6 +478,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
       objectReference: {fileID: 0}
+    - target: {fileID: 5079587343710192639, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     - target: {fileID: 6665058338279085096, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
       propertyPath: m_Anchor.y
       value: 0.048260093
@@ -494,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LegL
       objectReference: {fileID: 0}
+    - target: {fileID: 7423032926316299383, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
 --- !u!4 &7771909639214374549 stripped
@@ -508,6 +520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 418836584382422376}
     m_Modifications:
+    - target: {fileID: 550074240889148314, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     - target: {fileID: 948091347138348459, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
@@ -560,6 +576,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmR
       objectReference: {fileID: 0}
+    - target: {fileID: 3577656245897609854, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783919333701568936, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
 --- !u!4 &6122422925703062070 stripped
@@ -574,6 +598,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 418836584382422376}
     m_Modifications:
+    - target: {fileID: 550074240889148314, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     - target: {fileID: 948091347138348459, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
       propertyPath: m_Anchor.x
       value: 4.2853675
@@ -661,6 +689,14 @@ PrefabInstance:
     - target: {fileID: 3168806135938775224, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
       propertyPath: m_Name
       value: ArmL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577656245897609854, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783919333701568936, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
       objectReference: {fileID: 0}
     - target: {fileID: 7397010524197095986, guid: d5b06c358b7290e439dc938189fe9dc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -760,6 +796,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3355260387366071411, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5079587343710192639, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
+      objectReference: {fileID: 0}
     - target: {fileID: 6665058338279085096, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -1.8233885
@@ -771,6 +815,10 @@ PrefabInstance:
     - target: {fileID: 7033114265028147530, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
       propertyPath: m_Name
       value: LegR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423032926316299383, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
+      propertyPath: m_TagString
+      value: MonkeyPart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fed672acbcf90c489cba12e028a629c, type: 3}
