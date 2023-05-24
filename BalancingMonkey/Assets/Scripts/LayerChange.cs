@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LayerChange : MonoBehaviour
 {
-
+    private Queue queue;
     //private GameObject monkey;
 
     void Start(){
         //monkey = gameObject;
+        queue = FindObjectOfType<Queue>();
     }
 
     void Update()
@@ -23,10 +24,15 @@ public class LayerChange : MonoBehaviour
             {
                  child.gameObject.layer = 6;
             }
-            
+            monkey.GetComponent<MonkeyController>().UnFreezeAllMonkeyParts();
             hit.collider.gameObject.GetComponent<MonkeyMovement>().dragging = true;
             // The Ray hit something!
             Debug.Log("hit something");
+
+            //if (!queue.monkeyInPlayer1Spawn || !queue.monkeyInPlayer2Spawn)
+            //{
+            //    queue.SpawnNextInQueue();
+            //}
         }
     }
 }

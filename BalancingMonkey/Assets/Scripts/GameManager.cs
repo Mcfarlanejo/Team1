@@ -16,13 +16,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("tab"))
-        {
-            GameObject newMonkey = Instantiate(monkeyPrefab, spawnPosition, Quaternion.identity);
-            int Overlay = LayerMask.NameToLayer("Overlay");
-            newMonkey.layer = Overlay;
-            newMonkey.name = "Monkey " + monkeyCounter;
-            monkeyCounter++;
-        }
+        //if (Input.GetKeyDown("tab"))
+        //{
+        //    GameObject newMonkey = Instantiate(monkeyPrefab, spawnPosition, Quaternion.identity);
+        //    int Overlay = LayerMask.NameToLayer("Overlay");
+        //    newMonkey.layer = Overlay;
+        //    newMonkey.name = "Monkey " + monkeyCounter;
+        //    monkeyCounter++;
+        //}
     }
 }

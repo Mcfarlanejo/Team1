@@ -11,6 +11,7 @@ public class Queue : MonoBehaviour
     public GameObject currentMonkey;
     public GameObject nextMonkey;
     public GameObject nextInQueue;
+    public Button nextTurnButton;
 
     public Vector2 player1Position = new Vector2();
     public Vector2 player2Position = new Vector2();
@@ -21,11 +22,15 @@ public class Queue : MonoBehaviour
     public int iterations = 0;
     private int monkeyCounter = 0;
 
-    
+    public bool monkeyInPlayer1Spawn = false;
+    public bool monkeyInPlayer2Spawn = false;
+
+
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        //SpawnNextInQueue();
         NewTurn();
     }
 
@@ -86,7 +91,31 @@ public class Queue : MonoBehaviour
                 ChangeImage(image, 2);
             }
         }
+
+        nextTurnButton.interactable = false;
     }
+
+    //public void SpawnNextInQueue()
+    //{
+    //    if (currI % 2 == 1)
+    //    {
+    //        GameObject newMonkey = Instantiate(monkeyObjects[monkeyOne]);
+    //        monkeyCounter++;
+    //        newMonkey.name = "Monkey " + monkeyCounter;
+    //        newMonkey.transform.position = player1Position;
+    //        monkeyInPlayer1Spawn = true;
+    //        newMonkey.GetComponent<MonkeyController>().FreezeAllMonkeyParts();
+    //    }
+    //    else
+    //    {
+    //        GameObject newMonkey = Instantiate(monkeyObjects[monkeyTwo]);
+    //        monkeyCounter++;
+    //        newMonkey.name = "Monkey " + monkeyCounter;
+    //        newMonkey.transform.position = player2Position;
+    //        monkeyInPlayer2Spawn = true;
+    //        newMonkey.GetComponent<MonkeyController>().FreezeAllMonkeyParts();
+    //    }
+    //}
 
     public void ChangeImage(Image image, int currentMonkey)
     {
