@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2255134353018193645}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &929276939568498841
 SpriteRenderer:
@@ -104,7 +104,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
-  cam: {fileID: 0}
+  overlay: {fileID: 0}
 --- !u!70 &371988497105415832
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.42311, y: 1.3116407}
-  m_ConnectedAnchor: {x: -4.58689, y: -4.998359}
+  m_ConnectedAnchor: {x: -4.58689, y: -4.9983597}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -196,9 +196,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1647392487714719805}
-  - {fileID: 9221827601197021630}
   - {fileID: 7397010524197095986}
+  - {fileID: 9221827601197021630}
+  - {fileID: 1647392487714719805}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,7 +238,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -4.023457, y: -4.954053}
-  m_ConnectedAnchor: {x: -4.023457, y: -4.954053}
+  m_ConnectedAnchor: {x: -3.4683642, y: -2.7710133}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
-  cam: {fileID: 0}
+  overlay: {fileID: 0}
 --- !u!70 &501297152209536132
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.2538662, y: 0.88853073}
-  m_ConnectedAnchor: {x: -0.79386616, y: -1.1514697}
+  m_ConnectedAnchor: {x: -0.79386616, y: -1.1514692}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -447,7 +447,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2255134353018193645}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1215549773148709290
 SpriteRenderer:
@@ -517,7 +517,7 @@ MonoBehaviour:
   dragging: 0
   frozen: 0
   touchingBanana: 0
-  cam: {fileID: 0}
+  overlay: {fileID: 0}
 --- !u!70 &4697889488204998410
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.2538662, y: 0.84622}
-  m_ConnectedAnchor: {x: 0.15386629, y: -1.3837795}
+  m_ConnectedAnchor: {x: 0.15386677, y: -1.3837786}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

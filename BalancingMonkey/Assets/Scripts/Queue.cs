@@ -90,7 +90,7 @@ public class Queue : MonoBehaviour
 
     public void ChangeImage(Image image, int currentMonkey)
     {
-        int nextMonkeyImage = Random.Range(0,2);
+        int nextMonkeyImage = Random.Range(0,4);
         Texture2D texture = (Texture2D)queue[nextMonkeyImage];
         Rect rect = new Rect(0, 0, texture.width, texture.height);
         Sprite sprite = Sprite.Create(texture, rect, Vector2.zero);

@@ -9,7 +9,7 @@ public class buttonAction : MonoBehaviour
     private string[] players = { "Player 1", "Player 2" };
     private int currI = 0;
     public GameObject currentPlayerImage;
-    public Sprite[] images;
+    public GameObject secondPlayer;
 
     void Start(){
 
@@ -18,10 +18,12 @@ public class buttonAction : MonoBehaviour
         currI = (currI + 1) % players.Length;
         switch(currI){
             case 0:
-                currentPlayerImage.GetComponent<Image>().sprite = images[0];
+                currentPlayerImage.active = true;
+                secondPlayer.active = false;
                 break;
             case 1:
-                currentPlayerImage.GetComponent<Image>().sprite = images[1];
+                currentPlayerImage.active = false;
+                secondPlayer.active = true;
                 break;
         }
         
