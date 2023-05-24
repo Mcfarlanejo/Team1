@@ -602,6 +602,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945669544}
+        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+        m_MethodName: BackBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &294837768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1118,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945669544}
+        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1829,6 +1853,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945669544}
+        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1075634404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,6 +2492,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945669544}
+        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945669544}
+        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+        m_MethodName: PlayInGameBGM
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1766941096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2608,9 @@ MonoBehaviour:
   musicSource: {fileID: 805491682}
   sfxSource: {fileID: 783138091}
   backgroundMusic: {fileID: 8300000, guid: f3a6c95da05fad347a362ca7c74d0eb5, type: 3}
+  inGameMusic: {fileID: 8300000, guid: 1a0b79985069796458c4e74595c77ec0, type: 3}
+  btnClick: {fileID: 8300000, guid: 2248e475de5f6184aab0d500a1f3a2eb, type: 3}
+  backBtnClick: {fileID: 8300000, guid: dcfed094dfc81f54aa202f9584239de6, type: 3}
 --- !u!1 &2062729973
 GameObject:
   m_ObjectHideFlags: 0
