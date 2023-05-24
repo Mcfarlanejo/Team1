@@ -39,6 +39,11 @@ public class MonkeyMovement : MonoBehaviour
         frozen = true;
     }
 
+    public void UnFreezeMonkey()
+    {
+        frozen = false;
+    }
+
     private void OnMouseDown()
     {
 

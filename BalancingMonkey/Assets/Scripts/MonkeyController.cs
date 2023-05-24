@@ -3,24 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonkeyController : MonoBehaviour
 {
     public MonkeyMovement[] monkeyLimbs;
     public GameObject youWinPannel;
+    public GameObject nextTurnButton;
     // Start is called before the first frame update
     void Start()
     {
         monkeyLimbs = GetComponentsInChildren<MonkeyMovement>();
         youWinPannel = GameObject.Find("Winner");
+        nextTurnButton = GameObject.Find("Button");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown("space")) && (BeingDragged()) && (Touching()))
+        if ((Input.GetKeyDown("space")) && (BeingDragged()) && (Touching()) && (!Frozen()))
         {
             FreezeAllMonkeyParts();
+            nextTurnButton.GetComponent<Button>().interactable = true;
         }
 
         if ((TouchingBanana()) && (!youWinPannel.transform.GetChild(0).gameObject.activeInHierarchy))
@@ -28,6 +32,18 @@ public class MonkeyController : MonoBehaviour
             youWinPannel.transform.GetChild(0).gameObject.SetActive(true);
             Debug.Log("You Win!");
         }
+    }
+
+    private bool Frozen()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            if (monkeyPart.frozen)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private bool TouchingBanana()
@@ -66,11 +82,19 @@ public class MonkeyController : MonoBehaviour
         return false;
     }
 
-    private void FreezeAllMonkeyParts()
+    public void FreezeAllMonkeyParts()
     {
         foreach (MonkeyMovement monkeyPart in monkeyLimbs)
         {
             monkeyPart.FreezeMonkey();
+        }
+    }
+
+    public void UnFreezeAllMonkeyParts()
+    {
+        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        {
+            monkeyPart.UnFreezeMonkey();
         }
     }
 
