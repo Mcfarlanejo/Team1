@@ -92,10 +92,10 @@ public class MonkeyController : MonoBehaviour
 
     public void UnFreezeAllMonkeyParts()
     {
-        foreach (MonkeyMovement monkeyPart in monkeyLimbs)
-        {
-            monkeyPart.UnFreezeMonkey();
-        }
+        //foreach (MonkeyMovement monkeyPart in monkeyLimbs)
+        //{
+        //    monkeyPart.UnFreezeMonkey();
+        //}
     }
 
     private bool SolidPosition()
