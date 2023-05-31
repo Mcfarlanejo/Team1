@@ -401,7 +401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0120fd4fca927a345a2256afae425483, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2858fc76df1675428367e02111cde71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 905355715}
   - component: {fileID: 905355714}
   m_Layer: 5
-  m_Name: resumeBtnImg
+  m_Name: playBtnImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d59358a619d80b84db2a53b9c3cca0dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5898d19d1a4de734fb8f38e45c00d3a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
